@@ -9,10 +9,14 @@ using namespace std;
 // START:convert
 string convert(unsigned int arabic) 
 {
+// START:convertTable
    static auto arabicToRomanConversions = {
       make_pair(10, "X"), 
+// START_HIGHLIGHT
       make_pair(5, "V"), 
+// END_HIGHLIGHT
       make_pair(1, "I") };
+// END:convertTable
 
    string roman("");
    for (auto arabicToRoman: arabicToRomanConversions) 
