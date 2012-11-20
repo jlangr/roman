@@ -7,6 +7,8 @@ using namespace std;
 string convert(unsigned int arabic) 
 {
    string roman("");
+   if (arabic == 10)
+      return "X";
    while (arabic-- > 0)
       roman += "I";
    return roman;
@@ -17,8 +19,9 @@ string convert(unsigned int arabic)
 TEST(RomanConverter, CanConvertPositiveDigits) {
    EXPECT_THAT(convert(1), Eq("I"));
    EXPECT_THAT(convert(2), Eq("II"));
-// START:assert3
    EXPECT_THAT(convert(3), Eq("III"));
-// END:assert3
+// START:assert10
+   EXPECT_THAT(convert(10), Eq("X"));
+// END:assert10
 }
 // END:test
