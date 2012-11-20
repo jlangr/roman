@@ -35,6 +35,6 @@ TEST(RomanConverter, CanConvertPositiveDigits) {
    EXPECT_THAT(convert(13), Eq("XIII"));
 // START:assert20
    EXPECT_THAT(convert(20), Eq("XX"));
-// START:assert20
+// END:assert20
 }
 // END:test
