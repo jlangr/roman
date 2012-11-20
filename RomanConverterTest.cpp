@@ -11,10 +11,10 @@ string convert(unsigned int arabic)
 {
 // START:convertTable
    static auto arabicToRomanConversions = {
+      make_pair(100, "C"), 
+      make_pair(50, "L"), 
       make_pair(10, "X"), 
-// START_HIGHLIGHT
       make_pair(5, "V"), 
-// END_HIGHLIGHT
       make_pair(1, "I") };
 // END:convertTable
 
@@ -34,13 +34,17 @@ TEST(RomanConverter, CanConvertPositiveDigits) {
    EXPECT_THAT(convert(1), Eq("I"));
    EXPECT_THAT(convert(2), Eq("II"));
    EXPECT_THAT(convert(3), Eq("III"));
-// START:additionalAsserts
    EXPECT_THAT(convert(5), Eq("V"));
-// END:additionalAsserts
    EXPECT_THAT(convert(10), Eq("X"));
    EXPECT_THAT(convert(11), Eq("XI"));
    EXPECT_THAT(convert(12), Eq("XII"));
    EXPECT_THAT(convert(13), Eq("XIII"));
    EXPECT_THAT(convert(20), Eq("XX"));
+// START:additionalAsserts
+   EXPECT_THAT(convert(50), Eq("L"));
+   EXPECT_THAT(convert(80), Eq("LXXX"));
+   EXPECT_THAT(convert(100), Eq("C"));
+   EXPECT_THAT(convert(288), Eq("CCLXXXVIII"));
+// END:additionalAsserts
 }
 // END:test
