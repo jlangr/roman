@@ -11,6 +11,7 @@ string convert(unsigned int arabic)
 {
    static auto arabicToRomanConversions = {
       make_pair(10, "X"), 
+      make_pair(5, "V"), 
       make_pair(1, "I") };
 
    string roman("");
@@ -29,12 +30,13 @@ TEST(RomanConverter, CanConvertPositiveDigits) {
    EXPECT_THAT(convert(1), Eq("I"));
    EXPECT_THAT(convert(2), Eq("II"));
    EXPECT_THAT(convert(3), Eq("III"));
+// START:additionalAsserts
+   EXPECT_THAT(convert(5), Eq("V"));
+// END:additionalAsserts
    EXPECT_THAT(convert(10), Eq("X"));
    EXPECT_THAT(convert(11), Eq("XI"));
    EXPECT_THAT(convert(12), Eq("XII"));
    EXPECT_THAT(convert(13), Eq("XIII"));
-// START:assert20
    EXPECT_THAT(convert(20), Eq("XX"));
-// START:assert20
 }
 // END:test
