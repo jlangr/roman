@@ -14,7 +14,7 @@ string convert(unsigned int arabic)
 
 // START:test
 TEST(RomanConverter, CanConvertPositiveDigits) {
-   ASSERT_THAT(convert(1), Eq("I"));
-   ASSERT_THAT(convert(2), Eq("II"));
+   EXPECT_THAT(convert(1), Eq("I"));
+   EXPECT_THAT(convert(2), Eq("II"));
 }
 // END:test
