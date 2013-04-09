@@ -11,14 +11,14 @@ string convert(unsigned int arabic)
 {
 // START:convertTable
    static auto arabicToRomanConversions = {
-      make_pair(100, "C"), 
-      make_pair(50, "L"), 
-      make_pair(10, "X"), 
-      make_pair(5, "V"), 
+      make_pair(100u, "C"), 
+      make_pair(50u, "L"), 
+      make_pair(10u, "X"), 
+      make_pair(5u, "V"), 
 // START_HIGHLIGHT
-      make_pair(4, "IV"), 
+      make_pair(4u, "IV"), 
 // END_HIGHLIGHT
-      make_pair(1, "I") };
+      make_pair(1u, "I") };
 // END:convertTable
 
    string roman("");
