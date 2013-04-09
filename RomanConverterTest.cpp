@@ -10,8 +10,8 @@ using namespace std;
 string convert(unsigned int arabic) 
 {
    static auto arabicToRomanConversions = {
-      make_pair(10, "X"), 
-      make_pair(1, "I") };
+      make_pair(10u, "X"), 
+      make_pair(1u, "I") };
 
    string roman("");
    for (auto arabicToRoman: arabicToRomanConversions) 
