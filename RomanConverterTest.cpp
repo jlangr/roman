@@ -11,11 +11,11 @@ string convert(unsigned int arabic)
 {
 // START:convertTable
    static auto arabicToRomanConversions = {
-      make_pair(10, "X"), 
+      make_pair(10u, "X"), 
 // START_HIGHLIGHT
-      make_pair(5, "V"), 
+      make_pair(5u, "V"), 
 // END_HIGHLIGHT
-      make_pair(1, "I") };
+      make_pair(1u, "I") };
 // END:convertTable
 
    string roman("");
