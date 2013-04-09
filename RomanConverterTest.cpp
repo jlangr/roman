@@ -9,19 +9,19 @@ using namespace std;
 string convert(unsigned int arabic) 
 {
    static auto arabicToRomanConversions = {
-      make_pair(1000, "M"), 
-      make_pair(900, "CM"), 
-      make_pair(500, "D"), 
-      make_pair(400, "CD"), 
-      make_pair(100, "C"), 
-      make_pair(90, "XC"), 
-      make_pair(50, "L"), 
-      make_pair(40, "XL"), 
-      make_pair(10, "X"), 
-      make_pair(9, "IX"), 
-      make_pair(5, "V"), 
-      make_pair(4, "IV"), 
-      make_pair(1, "I") };
+      make_pair(1000u, "M"), 
+      make_pair(900u, "CM"), 
+      make_pair(500u, "D"), 
+      make_pair(400u, "CD"), 
+      make_pair(100u, "C"), 
+      make_pair(90u, "XC"), 
+      make_pair(50u, "L"), 
+      make_pair(40u, "XL"), 
+      make_pair(10u, "X"), 
+      make_pair(9u, "IX"), 
+      make_pair(5u, "V"), 
+      make_pair(4u, "IV"), 
+      make_pair(1u, "I") };
 
    string roman("");
    for (auto arabicToRoman: arabicToRomanConversions) 
