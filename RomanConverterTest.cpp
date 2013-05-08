@@ -8,7 +8,7 @@ using namespace std;
 
 string convert(unsigned int arabic) 
 {
-   static auto arabicToRomanConversions = {
+   const auto arabicToRomanConversions = {
       make_pair(1000u, "M"), 
       make_pair(900u, "CM"), 
       make_pair(500u, "D"), 
