@@ -21,7 +21,7 @@ string convert(unsigned int arabic)
       make_pair(1u, "I") };
 // END:convertTable
 
-   string roman("");
+   string roman{""};
    for (auto arabicToRoman: arabicToRomanConversions) 
       while (arabic >= arabicToRoman.first)
       {
