@@ -10,7 +10,7 @@ using namespace std;
 string convert(unsigned int arabic) 
 {
 // START:convertTable
-   static auto arabicToRomanConversions = {
+   const auto arabicToRomanConversions = {
       make_pair(100u, "C"), 
       make_pair(50u, "L"), 
       make_pair(10u, "X"), 
