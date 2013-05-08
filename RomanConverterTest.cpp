@@ -6,7 +6,7 @@ using namespace std;
 // START:convert
 string convert(unsigned int arabic) 
 {
-   string roman("");
+   string roman{""};
    while (arabic-- > 0)
       roman += "I";
    return roman;
